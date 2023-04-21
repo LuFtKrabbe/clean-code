@@ -53,7 +53,8 @@ ul {
 }
 
 li, 
-h3 {
+h1,
+h2 {
   list-style: none;
 }
 
