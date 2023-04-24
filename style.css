@@ -7,11 +7,19 @@
 }
 
 .body-header {
-  margin: 0 auto;
   display: block;
   width: 500px;
+  margin: 0 auto;
   text-align: right;
 }
+
+.body-main {
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+}
+
+/* Header Style */
 
 .header__seo-heading {
  display: none;
@@ -33,52 +41,11 @@
 
 }
 
-.body-main {
-  display: block;
-  width: 500px;
-  margin: 0 auto 0;
-}
-
-.new-task__input-for-name,
-.task__input-name,
-.task__label-name {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
-}
-
-.new-task {
-  display: flex;
-}
-
-.section__list {
-  margin: 0;
-  padding: 0px;
-}
-
-.new-task__btn-add,
-.task__btn-edit,
-.task__btn-delete {
-  outline: none;
-  background: none;
-  border: 0px;
-  color: #888;
-  font-size: 15px;
-  width: 60px;
-  font-family: Lato, sans-serif;
-  cursor: pointer;
-}
-
-.new-task__btn-add:hover,
-.task__btn-edit:hover {
-  color: #3a3a3a;
-}
-
 /* Heading */
+
 .section__heading {
   list-style: none;
   display: block;
-  color: #333;
   font-weight: 700;
   font-size: 15px;
   border-bottom: 2px solid #333;
@@ -87,8 +54,22 @@
   margin: 0;
 }
 
+/* Buttons, labels and inputs */
+
+.task__input-check {
+  margin: 0 10px;
+}
+
+.task__label-name {
+  flex-grow: 1;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
 .new-task__input-for-name,
 .task__input-name {
+  flex-grow: 1;
   outline: none;
   margin: 0;
   font-size: 18px;
@@ -107,17 +88,44 @@
   color: #333;
 }
 
-/* New Task */
-
-.section__new-task {
-  padding: 20px 0 16px 0;
+.task__btn-delete-icon {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform 200ms ease-in;
 }
 
-.new-task__input-for-name {
-  width: 318px;
+.task__btn-delete-icon:hover {
+  transform: rotateZ(0);
 }
 
-/* Task list */
+.new-task__btn-add,
+.task__btn-edit,
+.task__btn-delete {
+  outline: none;
+  background: none;
+  border: 0;
+  color: #888;
+  font-size: 15px;
+  width: 60px;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+
+.task__btn-delete {
+  height: 32px;
+}
+
+.new-task__btn-add:hover,
+.task__btn-edit:hover {
+  color: #3a3a3a;
+}
+
+/* Tasks */
+
+.section__list {
+  margin: 0;
+  padding: 0;
+}
 
 .section__task {
   padding: 20px 0;
@@ -132,32 +140,17 @@
   align-items: center;
 }
 
-.task__input-check {
-  margin: 0 10px;
+/* New Task */
+
+.section__new-task {
+  padding: 20px 0 14px 0;
 }
 
-.task__label-name {
-  padding-left: 10px;
-  box-sizing: border-box;
-  font-size: 18px;
-  width: 226px;
+.new-task {
+  display: flex;
 }
 
-.task__input-name {
-  width: 226px;
-}
-
-.task__btn-delete-icon {
-  height: 2em;
-  transform: rotateZ(45deg);
-  transition: transform 200ms ease-in;
-}
-
-.task__btn-delete-icon:hover {
-  transform: rotateZ(0);
-}
-
-/* Completed */
+/* Complete Task*/
 
 .section__list_complete-tasks .task__label-name {
   text-decoration: line-through;
@@ -176,5 +169,4 @@
 
 .task_edit-mode .task__input-name {
   display: inline-block;
-  width: 224px;
 }
