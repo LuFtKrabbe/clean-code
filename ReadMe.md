@@ -11,3 +11,5 @@
     - Редактирование элемента из списка "COMPLETED"
     - Установка элемента в статус незавершенного и перенос в список "TODO" через checkbox
     - Анимация на кнопке удаления
+
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
